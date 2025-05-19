@@ -1,0 +1,7 @@
+@mixin isHovered {
+    @media(hover:hover) {
+      &:hover {
+        @content;
+      }
+    }
+}

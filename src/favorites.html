@@ -7,12 +7,17 @@
     <!--     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
         <link rel="icon" href="img/favicon.png" type="image/png"> -->
 
-    <title>Интернет-магазин | Каталог товаров</title>
+    <title>Интернет-магазин | Избранное</title>
   </head>
   <body>
     <header class="header">
-      <a class="logo"> Internet-shop </a>
-      <!-- <button class="btn btn--catalog">
+      <a class="logo">
+        <img
+          src="https://avatars.mds.yandex.net/get-ydo/1380299/2a00000173e81e6a5169f2df97026d1374f7/diploma"
+          alt="Logo"
+        />
+      </a>
+      <button class="btn btn--catalog">
         <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 48 48">
           <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4">
             <path
@@ -22,9 +27,19 @@
           </g>
         </svg>
         Каталог
-      </button> -->
+      </button>
 
       <div class="header-triggers">
+        <button class="trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 1024 1024">
+            <path
+              fill="currentColor"
+              d="M532.528 661.408c-12.512 12.496-12.513 32.752-.001 45.248c6.256 6.256 14.432 9.376 22.624 9.376s16.368-3.12 22.624-9.376l189.008-194L577.775 318.64c-12.496-12.496-32.752-12.496-45.248 0c-12.512 12.496-12.512 32.752 0 45.248l115.744 115.76H31.839c-17.68 0-32 14.336-32 32s14.32 32 32 32h618.448zM960.159 0h-576c-35.36 0-64.017 28.656-64.017 64v288h64.432V103.024c0-21.376 17.344-38.72 38.72-38.72h496.704c21.408 0 38.72 17.344 38.72 38.72l1.007 818.288c0 21.376-17.311 38.72-38.72 38.72H423.31c-21.376 0-38.72-17.344-38.72-38.72V670.944l-64.432.08V960c0 35.344 28.656 64 64.017 64h576c35.344 0 64-28.656 64-64V64c-.016-35.344-28.672-64-64.016-64z"
+            />
+          </svg>
+          Вход/Регистрация
+        </button>
+
         <button class="trigger">
           <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
             <path
@@ -57,6 +72,9 @@
           </svg>
           Корзина
         </button>
+
+        <!-- <button class="btn btn-login">Войти</button>
+                <button class="btn btn-register">Регистрация</button> -->
       </div>
     </header>
 
@@ -64,138 +82,45 @@
       <section class="catalog section">
         <div class="container">
           <div class="section__header">
-            <h2 class="title">Каталог товаров</h2>
-
-            <!-- <div class="catalog__tabs tabs">
-              <div class="catalog__tabs-container tabs__container">
-                <div class="filters-wrapper tabs__wrapper">
-                  <ul class="catalog__tabs-list tabs__list">
-                    <li class="tabs__item">
-                      <button
-                        class="filter-button filter-active tabs__item-button"
-                        data-translate-value="0"
-                      >
-                        Все
-                      </button>
-                    </li>
-
-                    <li class="tabs__item">
-                      <button class="filter-button tabs__item-button" data-translate-value="100%">
-                        Оформление
-                      </button>
-                    </li>
-
-                    <li class="tabs__item">
-                      <button class="filter-button tabs__item-button" data-translate-value="200%">
-                        Продукция Melke
-                      </button>
-                    </li>
-
-                    <li class="tabs__item">
-                      <button class="filter-button tabs__item-button" data-translate-value="300%">
-                        Стенды
-                      </button>
-                    </li>
-
-                    <li class="tabs__item">
-                      <button class="filter-button tabs__item-button" data-translate-value="400%">
-                        Одежда
-                      </button>
-                    </li>
-
-                    <li class="tabs__item">
-                      <button class="filter-button tabs__item-button" data-translate-value="500%">
-                        Сувенирная продукция
-                      </button>
-                    </li>
-
-                    <li class="tabs__item">
-                      <button class="filter-button tabs__item-button" data-translate-value="600%">
-                        Печатная продукция
-                      </button>
-                    </li>
-                  </ul>
-                  <div class="catalog__tabs-slider tabs__slider">
-                    <div class="catalog__tabs-slider-track tabs__slider-track"></div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+            <h2 class="title">Избранные товары</h2>
           </div>
 
           <div class="products-content grid-container">
             <div class="filters">
-              <div class="filters__block fixed">
-                <h2 class="filters__title">Фильтры</h2>
-
-                <div class="filters__item filters-has">
-                  <details class="control__column">
-                    <summary class="filters-price__title">Наличие товаров</summary>
-                    <div class="control__content">
-                      <div class="filters-has__group control__group">
-                        <input
-                          id="has-other"
-                          type="radio"
-                          class="filters-has__input"
-                          name="has"
-                          value="other"
-                          checked
-                        />
-                        <label for="has-other" class="filters-has__label"> Неважно </label>
-                      </div>
-
-                      <div class="filters-has__group control__group">
-                        <input
-                          id="has-yes"
-                          type="radio"
-                          class="filters-has__input"
-                          name="has"
-                          value="yes"
-                        />
-                        <label for="has-yes" class="filters-has__label"> В наличии </label>
-                      </div>
-
-                      <div class="filters-has__group control__group">
-                        <input
-                          id="has-no"
-                          type="radio"
-                          class="filters-has__input"
-                          name="has"
-                          value="no"
-                        />
-                        <label for="has-no" class="filters-has__label"> Не в наличии </label>
-                      </div>
-                    </div>
-                  </details>
+              <h2 class="filters__title">Сортировка</h2>
+              <div class="filters__item filters-price fixed">
+                <div class="filters-price__slider range">
+                  <label for="" class="range__label">Цена</label>
+                  <input
+                    class="range__input"
+                    type="range"
+                    min="100"
+                    max="9999999"
+                    step="1"
+                    value="100"
+                    name="price"
+                    id="price"
+                  />
                 </div>
-
-                <div class="filters__item filters-price">
-                  <details class="control__column">
-                    <summary class="filters-price__title">Цена</summary>
-
-                    <div class="control__content">
-                      <div class="filters-price__inputs">
-                        <div class="filters-price__block">
-                          <input
-                            type="text"
-                            minlength="3"
-                            maxlength="7"
-                            value="100"
-                            class="filters-price__input"
-                          />
-                        </div>
-                        <div class="filters-price__block">
-                          <input
-                            type="text"
-                            minlength="3"
-                            maxlength="7"
-                            value="100 000"
-                            class="filters-price__input"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </details>
+                <div class="filters-price__inputs">
+                  <div class="filters-price__block">
+                    <input
+                      type="text"
+                      minlength="3"
+                      maxlength="7"
+                      value="100"
+                      class="filters-price__input"
+                    />
+                  </div>
+                  <div class="filters-price__block">
+                    <input
+                      type="text"
+                      minlength="3"
+                      maxlength="7"
+                      value="100 000"
+                      class="filters-price__input"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -1038,10 +963,11 @@
               </li>
             </ul>
           </div>
-
           <div class="height"></div>
         </div>
       </section>
     </main>
+
+    <footer class="footer"></footer>
   </body>
 </html>

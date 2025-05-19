@@ -1,0 +1,62 @@
+@use '../mixins' as mixins;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0.5rem;
+  background-color: var(--color-accent);
+  min-width: max-content;
+  border: 2px solid var(--color-accent);
+  border-radius: 10px;
+  height: 45px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+
+  &--catalog {
+    min-width: 135px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--buy {
+    width: calc(100% - 65px);
+  }
+
+  @include mixins.isHovered {
+    background-color: transparent;
+    color: var(--color-accent);
+  }
+
+  &--favorite {
+    background-color: transparent;
+    border-color: var(--text-color);
+    min-width: unset;
+    width: 45px;
+
+    svg {
+      fill: none;
+      stroke: var(--text-color);
+      transition: stroke 0.3s ease-in-out;
+    }
+
+    @include mixins.isHovered {
+      &:hover {
+        border-color: var(--color-accent);
+        svg {
+          stroke: var(--color-accent);
+        }
+      }
+    }
+  }
+}

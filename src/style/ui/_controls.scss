@@ -1,0 +1,26 @@
+input[type='checkbox'],
+input[type='radio'] {
+  accent-color: var(--color-accent);
+  width: 20px;
+  height: 20px;
+  color: var(--color-white);
+  background-color: var(--main-bg);
+}
+
+.control__group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control__column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.control__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

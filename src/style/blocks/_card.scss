@@ -1,0 +1,138 @@
+.card {
+  display: flex;
+  gap: 60px;
+
+  &-slider {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 592px;
+  }
+
+  &-info {
+    padding-right: 62px;
+    width: calc(100% - 592px - 60px);
+
+    &__testimonials {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      &-link {
+        font-size: 14px;
+        font-weight: 500;
+        border-bottom: 1px solid var(--color-accent);
+      }
+    }
+
+    &__triggers {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.slider-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 82px;
+
+  &__item {
+    height: 82px;
+    width: 100%;
+    background-color: var(--main-bg);
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      max-height: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.slider-block {
+  width: calc(100% - 82px - 20px);
+
+  &__slide {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4/3;
+    }
+  }
+}
+
+.vendor {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 14px;
+  color: var(--text-color-gray);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--color-accent);
+  }
+}
+
+.available {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 14px;
+  color: var(--text-color-gray);
+}
+
+.price {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-end;
+  gap: 25px;
+  line-height: 1;
+
+  &__current {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--color-accent);
+  }
+
+  &__old {
+    font-size: 18px;
+    color: var(--text-color-gray);
+    text-decoration: line-through;
+  }
+}
+
+.buy {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-accent);
+  color: white;
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+}

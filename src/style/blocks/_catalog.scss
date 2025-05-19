@@ -1,0 +1,22 @@
+.catalog {
+    .grid-container {
+        position: relative;
+        // padding-top: 80px;
+        width: 100%;
+        display: grid;
+        gap: var(--gutter);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .products-grid {
+        display: grid;
+        gap: var(--gutter);
+        grid-column: 3 span;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* доп высота для теста */
+    .height {
+        height: 3000px;
+    }
+}

@@ -1,0 +1,18 @@
+.trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-color);
+  }
+}
