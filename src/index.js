@@ -1,1 +1,3 @@
-console.log('Скрипт работает!');
+export const sum = (a, b) => {
+  return a + b;
+};
