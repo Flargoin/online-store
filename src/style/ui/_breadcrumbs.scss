@@ -1,0 +1,24 @@
+@use '../mixins' as mixins;
+
+.breadcrumbs {
+  padding-top: 70px;
+
+  &__list {
+    display: flex;
+    // gap: 5px;
+    font-size: 14px;
+    color: var(--text-color);
+
+    a {
+      color: currentColor;
+      transition: color 0.3s ease-in-out;
+
+      @include mixins.isHovered {
+        &:hover {
+          color: var(--color-accent);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

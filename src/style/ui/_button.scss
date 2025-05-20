@@ -30,7 +30,8 @@
   }
 
   &--buy {
-    width: calc(100% - 65px);
+    padding: 0 25px;
+    width: max-content;
   }
 
   @include mixins.isHovered {

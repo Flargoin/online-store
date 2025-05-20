@@ -3,7 +3,6 @@ body {
   background-color: var(--main-bg);
   color: var(--text-color);
   font-weight: 400;
-  user-select: none;
   font-size: 18px;
   line-height: 1.4;
 }
@@ -46,4 +45,9 @@ img {
 a {
   text-decoration: none;
   color: var(--color-accent);
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
 }
