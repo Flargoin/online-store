@@ -32,7 +32,7 @@
               d="M5 19V8.1L3.242 4.235l.916-.427L6.085 8.05h11.83l1.927-4.242l.916.427L19 8.1V19H5Zm5-6.5h4q.213 0 .356-.144q.144-.144.144-.357t-.144-.356Q14.213 11.5 14 11.5h-4q-.213 0-.356.144q-.144.144-.144.357t.144.356q.144.143.356.143ZM6 18h12V9.05H6V18Zm0 0V9.05V18Z"
             />
           </svg>
-          Заказы
+          Orders
         </button>
 
         <button class="trigger">
@@ -45,7 +45,7 @@
               d="M10.5 6.5c.5-2.5 4.343-2.657 6-1c1.603 1.603 1.5 4.334 0 6l-6 6l-6-6a4.243 4.243 0 0 1 0-6c1.55-1.55 5.5-1.5 6 1z"
             />
           </svg>
-          Избранное
+          Favorites
         </button>
 
         <button class="trigger">
@@ -55,7 +55,7 @@
               d="M0 1h4.764l.545 2h18.078l-3.666 11H7.78l-.5 2H22v2H4.72l1.246-4.989L3.236 3H0V1Zm7.764 11h10.515l2.334-7H5.855l1.909 7ZM4 21a2 2 0 1 1 4 0a2 2 0 0 1-4 0Zm14 0a2 2 0 1 1 4 0a2 2 0 0 1-4 0Z"
             />
           </svg>
-          Корзина
+          Cart
         </button>
       </div>
     </header>
@@ -64,7 +64,7 @@
       <section class="catalog section">
         <div class="container">
           <div class="section__header">
-            <h2 class="title">Каталог товаров</h2>
+            <h2 class="title">Catalog</h2>
 
             <!-- <div class="catalog__tabs tabs">
               <div class="catalog__tabs-container tabs__container">
@@ -126,11 +126,11 @@
           <div class="products-content grid-container">
             <div class="filters">
               <div class="filters__block fixed">
-                <h2 class="filters__title">Фильтры</h2>
+                <h2 class="filters__title">Filters</h2>
 
                 <div class="filters__item filters-has">
                   <details class="control__column">
-                    <summary class="filters-price__title">Наличие товаров</summary>
+                    <summary class="filters-price__title">Categories</summary>
                     <div class="control__content">
                       <div class="filters-has__group control__group">
                         <input
@@ -141,7 +141,7 @@
                           value="other"
                           checked
                         />
-                        <label for="has-other" class="filters-has__label"> Неважно </label>
+                        <label for="has-other" class="filters-has__label"> It doesn't matter</label>
                       </div>
 
                       <div class="filters-has__group control__group">
@@ -152,7 +152,7 @@
                           name="has"
                           value="yes"
                         />
-                        <label for="has-yes" class="filters-has__label"> В наличии </label>
+                        <label for="has-yes" class="filters-has__label"> In stock</label>
                       </div>
 
                       <div class="filters-has__group control__group">
@@ -163,7 +163,7 @@
                           name="has"
                           value="no"
                         />
-                        <label for="has-no" class="filters-has__label"> Не в наличии </label>
+                        <label for="has-no" class="filters-has__label"> Out of stock</label>
                       </div>
                     </div>
                   </details>
@@ -171,7 +171,135 @@
 
                 <div class="filters__item filters-price">
                   <details class="control__column">
-                    <summary class="filters-price__title">Цена</summary>
+                    <summary class="filters-price__title">Price</summary>
+
+                    <button class="filter-price__btn">
+                      Фильтрация по цене
+                      <svg
+                        fill="#000000"
+                        width="800px"
+                        height="800px"
+                        viewBox="0 0 59.998 59.998"
+                        id="Capa_1"
+                        version="1.1"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g>
+                          <path
+                            d="M59.206,0.293c-0.391-0.391-1.023-0.391-1.414,0L54.085,4H30.802L1.532,33.511c-0.666,0.666-1.033,1.553-1.033,2.495   s0.367,1.829,1.033,2.495l20.466,20.466c0.687,0.687,1.588,1.031,2.491,1.031c0.907,0,1.814-0.347,2.509-1.041l28.501-29.271V5.414   l3.707-3.707C59.597,1.316,59.597,0.684,59.206,0.293z M53.499,28.874L25.574,57.553c-0.596,0.596-1.566,0.596-2.162,0   L2.946,37.087c-0.596-0.596-0.596-1.566,0.003-2.165L31.636,6h20.449l-4.833,4.833C46.461,10.309,45.516,10,44.499,10   c-2.757,0-5,2.243-5,5s2.243,5,5,5s5-2.243,5-5c0-1.017-0.309-1.962-0.833-2.753l4.833-4.833V28.874z M47.499,15   c0,1.654-1.346,3-3,3s-3-1.346-3-3s1.346-3,3-3c0.462,0,0.894,0.114,1.285,0.301l-1.992,1.992c-0.391,0.391-0.391,1.023,0,1.414   C43.987,15.902,44.243,16,44.499,16s0.512-0.098,0.707-0.293l1.992-1.992C47.386,14.106,47.499,14.538,47.499,15z"
+                          />
+
+                          <path
+                            d="M42.246,31.281L31.64,41.888c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293   s0.512-0.098,0.707-0.293L43.66,32.695c0.391-0.391,0.391-1.023,0-1.414S42.637,30.891,42.246,31.281z"
+                          />
+
+                          <path
+                            d="M45.779,27.74c-0.181,0.189-0.29,0.449-0.29,0.71c0,0.27,0.109,0.529,0.29,0.71c0.189,0.189,0.449,0.29,0.71,0.29   c0.26,0,0.52-0.101,0.699-0.29c0.19-0.181,0.301-0.44,0.301-0.71c0-0.261-0.11-0.521-0.301-0.71   C46.818,27.37,46.159,27.37,45.779,27.74z"
+                          />
+
+                          <path
+                            d="M37.296,19.26c0.391-0.391,0.391-1.023,0-1.414c-0.391-0.391-1.023-0.391-1.414,0L25.275,28.453   c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293L37.296,19.26z"
+                          />
+
+                          <path
+                            d="M33.761,31.281c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l7.071-7.071c0.391-0.391,0.391-1.023,0-1.414   s-1.023-0.391-1.414,0l-7.071,7.071C33.37,30.258,33.37,30.891,33.761,31.281z"
+                          />
+
+                          <path
+                            d="M28.104,35.523l-1.414,1.414c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293   s0.512-0.098,0.707-0.293l1.414-1.414c0.391-0.391,0.391-1.023,0-1.414S28.494,35.133,28.104,35.523z"
+                          />
+
+                          <path
+                            d="M17.497,28.745c0.256,0,0.512-0.098,0.707-0.293l10.606-10.606c0.391-0.391,0.391-1.023,0-1.414s-1.023-0.391-1.414,0   L16.79,27.038c-0.391,0.391-0.391,1.023,0,1.414C16.985,28.647,17.241,28.745,17.497,28.745z"
+                          />
+
+                          <path
+                            d="M31.639,14.6c0.26,0,0.521-0.1,0.71-0.29c0.181-0.189,0.29-0.439,0.29-0.71c0-0.26-0.109-0.52-0.3-0.71   c-0.37-0.37-1.03-0.37-1.41,0.01c-0.18,0.181-0.29,0.44-0.29,0.7s0.11,0.521,0.29,0.71C31.119,14.5,31.379,14.6,31.639,14.6z"
+                          />
+
+                          <path
+                            d="M22.449,31.28c-0.19,0.189-0.29,0.439-0.29,0.71c0,0.27,0.1,0.52,0.29,0.699c0.18,0.19,0.439,0.301,0.71,0.301   c0.26,0,0.52-0.11,0.699-0.29c0.19-0.19,0.301-0.45,0.301-0.71c0-0.261-0.11-0.521-0.301-0.71   C23.489,30.91,22.818,30.91,22.449,31.28z"
+                          />
+
+                          <path
+                            d="M32.349,34.109c0.181-0.18,0.29-0.439,0.29-0.71c0-0.26-0.109-0.52-0.29-0.71c-0.38-0.37-1.04-0.37-1.42,0   c-0.18,0.19-0.29,0.45-0.29,0.71c0,0.271,0.11,0.521,0.29,0.71c0.19,0.19,0.45,0.29,0.71,0.29S32.159,34.3,32.349,34.109z"
+                          />
+
+                          <path
+                            d="M24.651,47.627c0.615-0.929,0.909-2.041,0.814-3.172c-0.078-0.944-0.533-1.797-1.28-2.403   c-0.765-0.619-1.769-0.903-2.738-0.781l-2.802,0.35l-3.846-3.846c1.114-0.529,2.485-0.344,3.406,0.577   c0.391,0.391,1.023,0.391,1.414,0s0.391-1.023,0-1.414c-1.707-1.707-4.352-1.918-6.293-0.635l-0.779-0.779   c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414l0.781,0.781c-0.614,0.928-0.908,2.041-0.813,3.172   c0.078,0.943,0.533,1.797,1.279,2.402c0.765,0.619,1.763,0.904,2.739,0.783l2.802-0.35l3.836,3.836   c-1.111,0.501-2.51,0.318-3.396-0.568c-0.391-0.391-1.023-0.391-1.414,0c-0.391,0.39-0.391,1.023,0,1.414   c0.943,0.944,2.199,1.465,3.535,1.465c0.996,0,1.946-0.291,2.757-0.829l0.622,0.622c0.195,0.195,0.451,0.293,0.707,0.293   s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414L24.651,47.627z M14.871,42.092c-0.438,0.054-0.889-0.072-1.231-0.352   c-0.319-0.26-0.514-0.62-0.547-1.016c-0.044-0.536,0.07-1.059,0.295-1.532l2.742,2.742L14.871,42.092z M21.695,43.255   c0.433-0.059,0.886,0.072,1.229,0.351c0.32,0.26,0.515,0.62,0.548,1.016c0.044,0.536-0.07,1.059-0.296,1.532l-2.741-2.741   L21.695,43.255z"
+                          />
+                        </g>
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+
+                        <g />
+                      </svg>
+                      <svg
+                        fill="#000000"
+                        width="800px"
+                        height="800px"
+                        viewBox="0 0 24 24"
+                        id="up-arrow"
+                        data-name="Flat Line"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon flat-line"
+                      >
+                        <line
+                          id="primary"
+                          x1="12"
+                          y1="21"
+                          x2="12"
+                          y2="3"
+                          style="
+                            fill: none;
+                            stroke: rgb(0, 0, 0);
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 2;
+                          "
+                        ></line>
+                        <polyline
+                          id="primary-2"
+                          data-name="primary"
+                          points="15 6 12 3 9 6"
+                          style="
+                            fill: none;
+                            stroke: rgb(0, 0, 0);
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 2;
+                          "
+                        ></polyline>
+                      </svg>
+                    </button>
 
                     <div class="control__content">
                       <div class="filters-price__inputs">
@@ -182,6 +310,7 @@
                             maxlength="7"
                             value="100"
                             class="filters-price__input"
+                            data-price-min
                           />
                         </div>
                         <div class="filters-price__block">
@@ -189,8 +318,9 @@
                             type="text"
                             minlength="3"
                             maxlength="7"
-                            value="100 000"
+                            value="600"
                             class="filters-price__input"
+                            data-price-max
                           />
                         </div>
                       </div>
@@ -199,847 +329,10 @@
                 </div>
               </div>
             </div>
-            <ul class="products-grid">
-              <li class="products-grid__item">
-                <article class="product">
-                  <div class="product__image">
-                    <div class="product__switch image-switch">
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-view-blue-lake-captured-from-inside-villa_181624-10734.jpg?t=st=1742325552~exp=1742329152~hmac=2ab874b961806b0fb94d4a4699319f93c26e88291eb9a090f6b7130f5a1ffdf0&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/luxury-beach-house-with-glass-windows-beautiful-scenery-sea_181624-9041.jpg?t=st=1742325583~exp=1742329183~hmac=9c4165b539283a0f06f86c719a625c874d51273863ade191f5a99f4eab02585d&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-kitchen-with-modern-interior_181624-57935.jpg?t=st=1742325608~exp=1742329208~hmac=2f4b36bbcd92c60097953719d1b7c2f7ecf98a832ccd31cc1fead1adc7a72896&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
-                    <button class="product__favorite">
-                      <svg
-                        width="800px"
-                        height="800px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="product__body">
-                    <h3 class="product__title">
-                      <a href="#">Панорамные окна Melke</a>
-                    </h3>
-                    <div class="product__props">
-                      <span class="product__rating">
-                        <svg
-                          width="32"
-                          height="32"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                          />
-                        </svg>
-
-                        4.5
-                      </span>
-                      <span class="product__testimonials">83 отзыва</span>
-                    </div>
-
-                    <div class="product__info">
-                      <span class="product__term">Артикул: 123456</span>
-                      <span class="product__available">В наличии: 13шт.</span>
-                    </div>
-
-                    <div class="product__price product-price">
-                      <span class="product-price__current">40000 ₽</span>
-                      <span class="product-price__old">60000 ₽</span>
-                    </div>
-
-                    <button class="product__btn">Добавить в корзину</button>
-                  </div>
-                </article>
-              </li>
-
-              <li class="products-grid__item">
-                <article class="product">
-                  <div class="product__image">
-                    <div class="product__switch image-switch">
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-view-blue-lake-captured-from-inside-villa_181624-10734.jpg?t=st=1742325552~exp=1742329152~hmac=2ab874b961806b0fb94d4a4699319f93c26e88291eb9a090f6b7130f5a1ffdf0&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/luxury-beach-house-with-glass-windows-beautiful-scenery-sea_181624-9041.jpg?t=st=1742325583~exp=1742329183~hmac=9c4165b539283a0f06f86c719a625c874d51273863ade191f5a99f4eab02585d&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-kitchen-with-modern-interior_181624-57935.jpg?t=st=1742325608~exp=1742329208~hmac=2f4b36bbcd92c60097953719d1b7c2f7ecf98a832ccd31cc1fead1adc7a72896&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
-                    <button class="product__favorite">
-                      <svg
-                        width="800px"
-                        height="800px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="product__body">
-                    <h3 class="product__title">
-                      <a href="#">Панорамные окна Melke</a>
-                    </h3>
-                    <div class="product__props">
-                      <span class="product__rating">
-                        <svg
-                          width="32"
-                          height="32"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                          />
-                        </svg>
-
-                        4.5
-                      </span>
-                      <span class="product__testimonials">83 отзыва</span>
-                    </div>
-
-                    <div class="product__info">
-                      <span class="product__term">Артикул: 123456</span>
-                      <span class="product__available">В наличии: 13шт.</span>
-                    </div>
-
-                    <div class="product__price product-price">
-                      <span class="product-price__current">40000 ₽</span>
-                      <span class="product-price__old">60000 ₽</span>
-                    </div>
-
-                    <button class="product__btn">Добавить в корзину</button>
-                  </div>
-                </article>
-              </li>
-
-              <li class="products-grid__item">
-                <article class="product">
-                  <div class="product__image">
-                    <div class="product__switch image-switch">
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-view-blue-lake-captured-from-inside-villa_181624-10734.jpg?t=st=1742325552~exp=1742329152~hmac=2ab874b961806b0fb94d4a4699319f93c26e88291eb9a090f6b7130f5a1ffdf0&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/luxury-beach-house-with-glass-windows-beautiful-scenery-sea_181624-9041.jpg?t=st=1742325583~exp=1742329183~hmac=9c4165b539283a0f06f86c719a625c874d51273863ade191f5a99f4eab02585d&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-kitchen-with-modern-interior_181624-57935.jpg?t=st=1742325608~exp=1742329208~hmac=2f4b36bbcd92c60097953719d1b7c2f7ecf98a832ccd31cc1fead1adc7a72896&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
-                    <button class="product__favorite">
-                      <svg
-                        width="800px"
-                        height="800px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="product__body">
-                    <h3 class="product__title">
-                      <a href="#">Панорамные окна Melke</a>
-                    </h3>
-                    <div class="product__props">
-                      <span class="product__rating">
-                        <svg
-                          width="32"
-                          height="32"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                          />
-                        </svg>
-
-                        4.5
-                      </span>
-                      <span class="product__testimonials">83 отзыва</span>
-                    </div>
-
-                    <div class="product__info">
-                      <span class="product__term">Артикул: 123456</span>
-                      <span class="product__available">В наличии: 13шт.</span>
-                    </div>
-
-                    <div class="product__price product-price">
-                      <span class="product-price__current">40000 ₽</span>
-                      <span class="product-price__old">60000 ₽</span>
-                    </div>
-
-                    <button class="product__btn">Добавить в корзину</button>
-                  </div>
-                </article>
-              </li>
-
-              <li class="products-grid__item">
-                <article class="product">
-                  <div class="product__image">
-                    <div class="product__switch image-switch">
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-view-blue-lake-captured-from-inside-villa_181624-10734.jpg?t=st=1742325552~exp=1742329152~hmac=2ab874b961806b0fb94d4a4699319f93c26e88291eb9a090f6b7130f5a1ffdf0&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/luxury-beach-house-with-glass-windows-beautiful-scenery-sea_181624-9041.jpg?t=st=1742325583~exp=1742329183~hmac=9c4165b539283a0f06f86c719a625c874d51273863ade191f5a99f4eab02585d&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-kitchen-with-modern-interior_181624-57935.jpg?t=st=1742325608~exp=1742329208~hmac=2f4b36bbcd92c60097953719d1b7c2f7ecf98a832ccd31cc1fead1adc7a72896&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
-                    <button class="product__favorite">
-                      <svg
-                        width="800px"
-                        height="800px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="product__body">
-                    <h3 class="product__title">
-                      <a href="#">Панорамные окна Melke</a>
-                    </h3>
-                    <div class="product__props">
-                      <span class="product__rating">
-                        <svg
-                          width="32"
-                          height="32"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                          />
-                        </svg>
-
-                        4.5
-                      </span>
-                      <span class="product__testimonials">83 отзыва</span>
-                    </div>
-
-                    <div class="product__info">
-                      <span class="product__term">Артикул: 123456</span>
-                      <span class="product__available">В наличии: 13шт.</span>
-                    </div>
-
-                    <div class="product__price product-price">
-                      <span class="product-price__current">40000 ₽</span>
-                      <span class="product-price__old">60000 ₽</span>
-                    </div>
-
-                    <button class="product__btn">Добавить в корзину</button>
-                  </div>
-                </article>
-              </li>
-
-              <li class="products-grid__item">
-                <article class="product">
-                  <div class="product__image">
-                    <div class="product__switch image-switch">
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-view-blue-lake-captured-from-inside-villa_181624-10734.jpg?t=st=1742325552~exp=1742329152~hmac=2ab874b961806b0fb94d4a4699319f93c26e88291eb9a090f6b7130f5a1ffdf0&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/luxury-beach-house-with-glass-windows-beautiful-scenery-sea_181624-9041.jpg?t=st=1742325583~exp=1742329183~hmac=9c4165b539283a0f06f86c719a625c874d51273863ade191f5a99f4eab02585d&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-kitchen-with-modern-interior_181624-57935.jpg?t=st=1742325608~exp=1742329208~hmac=2f4b36bbcd92c60097953719d1b7c2f7ecf98a832ccd31cc1fead1adc7a72896&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
-                    <button class="product__favorite">
-                      <svg
-                        width="800px"
-                        height="800px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="product__body">
-                    <h3 class="product__title">
-                      <a href="#">Панорамные окна Melke</a>
-                    </h3>
-                    <div class="product__props">
-                      <span class="product__rating">
-                        <svg
-                          width="32"
-                          height="32"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                          />
-                        </svg>
-
-                        4.5
-                      </span>
-                      <span class="product__testimonials">83 отзыва</span>
-                    </div>
-
-                    <div class="product__info">
-                      <span class="product__term">Артикул: 123456</span>
-                      <span class="product__available">В наличии: 13шт.</span>
-                    </div>
-
-                    <div class="product__price product-price">
-                      <span class="product-price__current">40000 ₽</span>
-                      <span class="product-price__old">60000 ₽</span>
-                    </div>
-
-                    <button class="product__btn">Добавить в корзину</button>
-                  </div>
-                </article>
-              </li>
-
-              <li class="products-grid__item">
-                <article class="product">
-                  <div class="product__image">
-                    <div class="product__switch image-switch">
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-view-blue-lake-captured-from-inside-villa_181624-10734.jpg?t=st=1742325552~exp=1742329152~hmac=2ab874b961806b0fb94d4a4699319f93c26e88291eb9a090f6b7130f5a1ffdf0&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/luxury-beach-house-with-glass-windows-beautiful-scenery-sea_181624-9041.jpg?t=st=1742325583~exp=1742329183~hmac=9c4165b539283a0f06f86c719a625c874d51273863ade191f5a99f4eab02585d&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-kitchen-with-modern-interior_181624-57935.jpg?t=st=1742325608~exp=1742329208~hmac=2f4b36bbcd92c60097953719d1b7c2f7ecf98a832ccd31cc1fead1adc7a72896&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
-                    <button class="product__favorite">
-                      <svg
-                        width="800px"
-                        height="800px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="product__body">
-                    <h3 class="product__title">
-                      <a href="#">Панорамные окна Melke</a>
-                    </h3>
-                    <div class="product__props">
-                      <span class="product__rating">
-                        <svg
-                          width="32"
-                          height="32"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                          />
-                        </svg>
-
-                        4.5
-                      </span>
-                      <span class="product__testimonials">83 отзыва</span>
-                    </div>
-
-                    <div class="product__info">
-                      <span class="product__term">Артикул: 123456</span>
-                      <span class="product__available">В наличии: 13шт.</span>
-                    </div>
-
-                    <div class="product__price product-price">
-                      <span class="product-price__current">40000 ₽</span>
-                      <span class="product-price__old">60000 ₽</span>
-                    </div>
-
-                    <button class="product__btn">Добавить в корзину</button>
-                  </div>
-                </article>
-              </li>
-
-              <li class="products-grid__item">
-                <article class="product">
-                  <div class="product__image">
-                    <div class="product__switch image-switch">
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-view-blue-lake-captured-from-inside-villa_181624-10734.jpg?t=st=1742325552~exp=1742329152~hmac=2ab874b961806b0fb94d4a4699319f93c26e88291eb9a090f6b7130f5a1ffdf0&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/luxury-beach-house-with-glass-windows-beautiful-scenery-sea_181624-9041.jpg?t=st=1742325583~exp=1742329183~hmac=9c4165b539283a0f06f86c719a625c874d51273863ade191f5a99f4eab02585d&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-kitchen-with-modern-interior_181624-57935.jpg?t=st=1742325608~exp=1742329208~hmac=2f4b36bbcd92c60097953719d1b7c2f7ecf98a832ccd31cc1fead1adc7a72896&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
-                    <button class="product__favorite">
-                      <svg
-                        width="800px"
-                        height="800px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="product__body">
-                    <h3 class="product__title">
-                      <a href="#">Панорамные окна Melke</a>
-                    </h3>
-                    <div class="product__props">
-                      <span class="product__rating">
-                        <svg
-                          width="32"
-                          height="32"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                          />
-                        </svg>
-
-                        4.5
-                      </span>
-                      <span class="product__testimonials">83 отзыва</span>
-                    </div>
-
-                    <div class="product__info">
-                      <span class="product__term">Артикул: 123456</span>
-                      <span class="product__available">В наличии: 13шт.</span>
-                    </div>
-
-                    <div class="product__price product-price">
-                      <span class="product-price__current">40000 ₽</span>
-                      <span class="product-price__old">60000 ₽</span>
-                    </div>
-
-                    <button class="product__btn">Добавить в корзину</button>
-                  </div>
-                </article>
-              </li>
-
-              <li class="products-grid__item">
-                <article class="product">
-                  <div class="product__image">
-                    <div class="product__switch image-switch">
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-view-blue-lake-captured-from-inside-villa_181624-10734.jpg?t=st=1742325552~exp=1742329152~hmac=2ab874b961806b0fb94d4a4699319f93c26e88291eb9a090f6b7130f5a1ffdf0&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/luxury-beach-house-with-glass-windows-beautiful-scenery-sea_181624-9041.jpg?t=st=1742325583~exp=1742329183~hmac=9c4165b539283a0f06f86c719a625c874d51273863ade191f5a99f4eab02585d&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-kitchen-with-modern-interior_181624-57935.jpg?t=st=1742325608~exp=1742329208~hmac=2f4b36bbcd92c60097953719d1b7c2f7ecf98a832ccd31cc1fead1adc7a72896&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
-                    <button class="product__favorite">
-                      <svg
-                        width="800px"
-                        height="800px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="product__body">
-                    <h3 class="product__title">
-                      <a href="#">Панорамные окна Melke</a>
-                    </h3>
-                    <div class="product__props">
-                      <span class="product__rating">
-                        <svg
-                          width="32"
-                          height="32"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                          />
-                        </svg>
-
-                        4.5
-                      </span>
-                      <span class="product__testimonials">83 отзыва</span>
-                    </div>
-
-                    <div class="product__info">
-                      <span class="product__term">Артикул: 123456</span>
-                      <span class="product__available">В наличии: 13шт.</span>
-                    </div>
-
-                    <div class="product__price product-price">
-                      <span class="product-price__current">40000 ₽</span>
-                      <span class="product-price__old">60000 ₽</span>
-                    </div>
-
-                    <button class="product__btn">Добавить в корзину</button>
-                  </div>
-                </article>
-              </li>
-
-              <li class="products-grid__item">
-                <article class="product">
-                  <div class="product__image">
-                    <div class="product__switch image-switch">
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-view-blue-lake-captured-from-inside-villa_181624-10734.jpg?t=st=1742325552~exp=1742329152~hmac=2ab874b961806b0fb94d4a4699319f93c26e88291eb9a090f6b7130f5a1ffdf0&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/luxury-beach-house-with-glass-windows-beautiful-scenery-sea_181624-9041.jpg?t=st=1742325583~exp=1742329183~hmac=9c4165b539283a0f06f86c719a625c874d51273863ade191f5a99f4eab02585d&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                      <div class="image-switch__item">
-                        <div class="image-switch__img">
-                          <img
-                            src="https://img.freepik.com/free-photo/beautiful-kitchen-with-modern-interior_181624-57935.jpg?t=st=1742325608~exp=1742329208~hmac=2f4b36bbcd92c60097953719d1b7c2f7ecf98a832ccd31cc1fead1adc7a72896&w=996"
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
-                    <button class="product__favorite">
-                      <svg
-                        width="800px"
-                        height="800px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="product__body">
-                    <h3 class="product__title">
-                      <a href="#">Панорамные окна Melke</a>
-                    </h3>
-                    <div class="product__props">
-                      <span class="product__rating">
-                        <svg
-                          width="32"
-                          height="32"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                          />
-                        </svg>
-
-                        4.5
-                      </span>
-                      <span class="product__testimonials">83 отзыва</span>
-                    </div>
-
-                    <div class="product__info">
-                      <span class="product__term">Артикул: 123456</span>
-                      <span class="product__available">В наличии: 13шт.</span>
-                    </div>
-
-                    <div class="product__price product-price">
-                      <span class="product-price__current">40000 ₽</span>
-                      <span class="product-price__old">60000 ₽</span>
-                    </div>
-
-                    <button class="product__btn">Добавить в корзину</button>
-                  </div>
-                </article>
-              </li>
-            </ul>
+            <ul class="products-grid"></ul>
           </div>
-
-          <div class="height"></div>
+          <!-- 
+          <div class="height"></div> -->
         </div>
       </section>
     </main>

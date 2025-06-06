@@ -8,15 +8,20 @@
 @use './style/blocks/filters';
 @use './style/blocks/catalog';
 @use './style/blocks/card';
+@use './style/blocks/cart';
 
 // ui
 @use './style/ui/section';
+@use './style/ui/title';
 @use './style/ui/button';
 @use './style/ui/controls';
 @use './style/ui/trigger';
 @use './style/ui/toggle';
 @use './style/ui/form';
 @use './style/ui/product';
+@use './style/ui/price';
 @use './style/ui/tabs';
 @use './style/ui/chars';
 @use './style/ui/breadcrumbs';
+@use './style/ui/stepper';
+@use './style/ui/slider';

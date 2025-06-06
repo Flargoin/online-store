@@ -1,0 +1,48 @@
+.slider-nav {
+  width: 84px;
+  overflow: hidden;
+
+  & .swiper-wrapper {
+    width: 95%;
+    margin-left: 3%;
+    padding: 2px 0;
+  }
+
+  &__item {
+    height: 82px !important;
+    width: 100%;
+    background-color: var(--main-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      max-height: 100%;
+      height: 100%;
+    }
+
+    &.swiper-slide-thumb-active {
+      outline: 2px solid var(--color-accent);
+    }
+  }
+}
+
+.slider-block {
+  width: calc(100% - 86px - 20px);
+  max-height: 360px;
+  height: 100%;
+  overflow: hidden;
+
+  &__slide {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4/3;
+    }
+  }
+}

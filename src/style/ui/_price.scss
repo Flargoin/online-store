@@ -1,0 +1,26 @@
+.price {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-end;
+  gap: 25px;
+  line-height: 1;
+  font-weight: 500;
+
+  &__current {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--color-accent);
+  }
+
+  &__old {
+    font-size: 18px;
+    color: var(--text-color-gray);
+    text-decoration: line-through;
+  }
+}
+
+.discount {
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}

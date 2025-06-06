@@ -28,30 +28,34 @@
 
       &:nth-of-type(1) {
         &::before {
-          content: 'от';
+          content: 'from';
           position: absolute;
-          top: 50%;
+          top: 0%;
           left: 15px;
+          padding: 0 5px;
           transform: translateY(-50%);
           color: var(--text-color);
+          background-color: var(--color-white);
         }
       }
 
       &:nth-of-type(2) {
         &::before {
-          content: 'до';
+          content: 'to';
           position: absolute;
-          top: 50%;
+          top: 0%;
           left: 15px;
+          padding: 0 5px;
           transform: translateY(-50%);
           color: var(--text-color);
+          background-color: var(--color-white);
         }
       }
     }
 
     &__input {
       width: 100%;
-      padding: 0px 15px 0px 40px;
+      padding: 0px 15px 0px 15px;
       border: 1px solid var(--border-color);
       background-color: transparent;
       height: 40px;
@@ -62,6 +66,32 @@
       &::-webkit-inner-spin-button {
         appearance: none;
         margin: 0;
+      }
+    }
+
+    .filter-price__btn {
+      margin-bottom: 20px;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-end;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.3s ease-in-out;
+
+        &:last-child {
+          transform: rotate(180deg);
+        }
+      }
+
+      &.js-active {
+        svg:last-child {
+          transform: rotate(0deg);
+        }
       }
     }
   }

@@ -1,216 +1,237 @@
 @use '../mixins' as mixins;
 
 .product {
-    background-color: #fff;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 14px;
+
+  &__image {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 250px;
+  }
+
+  &__body {
+    padding: 20px;
+    padding-top: 10px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 1.4;
+
+    a {
+      color: #3e3e3e;
+      text-decoration: none;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+  }
+
+  &__props {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  &__rating {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 5px;
+    color: var(--color-accent);
+    font-weight: 600;
+
+    svg {
+      width: 15px;
+      height: auto;
+      fill: currentColor;
+    }
+  }
+
+  &__testimonials {
+    color: #808080;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #808080;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    border: 1px solid var(--color-accent);
     border-radius: 4px;
-    border: 1px solid #d9d9d9;
-    box-sizing: border-box;
-    color: #000;
-    font-size: 14px;
+    padding: 14px 0;
+    cursor: pointer;
+    background-color: var(--color-accent);
+    color: #fff;
+    transition:
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out;
 
-    &__image {
-        position: relative;
-        display: block;
-        height: 200px;
+    @include mixins.isHovered {
+      background-color: transparent;
+      color: var(--color-accent);
     }
+  }
 
-    &__body {
-        padding: 20px;
-        padding-top: 10px;
+  &__favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    z-index: 30;
+    user-select: none;
+
+    & svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      stroke: #000;
+      transition: fill 0.9s ease-in-out stroke 0.3s ease-in-out;
+
+      @include mixins.isHovered {
+        fill: var(--color-accent);
+        stroke: transparent;
+      }
     }
-
-    &__title {
-        margin: 0;
-        margin-bottom: 10px;
-        font-weight: 400;
-        line-height: 1.4;
-        
-        a {
-            color: #3e3e3e;
-            text-decoration: none;
-        }
-    }
-
-    &__props {
-        margin-bottom: 20px;
-        display: flex;
-        align-items: baseline;
-        gap: 8px;
-    }
-
-    &__rating {
-        display: inline-flex;
-        align-items: baseline;
-        gap: 5px;
-        color: var(--color-accent);
-        font-weight: 600;
-
-        svg {
-            width: 15px;
-            height: auto;
-            fill: currentColor;
-        }
-    }
-
-    &__testimonials {
-        color: #808080;
-    }
-
-    &__info {
-        margin-bottom: 15px;
-        font-size: 12px;
-        color: #808080;
-    }
-
-    &__term {
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    &__available {
-        display: block;
-    }
-
-    &__btn {
-        width: 100%;
-        border: 1px solid var(--color-accent);
-        border-radius: 4px;
-        padding: 14px 0;
-        cursor: pointer;
-        background-color: var(--color-accent);
-        color: #fff;
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-
-        @include mixins.isHovered {
-            background-color: transparent;
-            color: var(--color-accent);
-        }
-    }
-
-    &__favorite {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 30px;
-        height: 30px;
-        z-index: 30;
-        user-select: none;
-
-        & svg {
-            display: block;
-            width: 100%;
-            height: 100%;
-            stroke: #000;
-            transition: fill 0.9s ease-in-out stroke 0.3s ease-in-out;
-
-            @include mixins.isHovered {
-                fill: var(--color-accent);
-                stroke: transparent;
-            }
-        }
-    }
+  }
 }
 
 .product-price {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &.hidden {
+    display: none;
+  }
+
+  &__current {
+    color: #3e3e3e;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  &__old {
+    color: #808080;
+    font-size: 12px;
+    line-height: 1.2;
+    text-decoration: line-through;
+  }
+
+  div {
     display: flex;
-    align-items: baseline;
-    gap: 10px;
+    flex-direction: column;
+  }
 
-    &__current {
-        color: #3e3e3e;
-        font-size: 24px;
-        line-height: 1.4;
-    }
-
-    &__old {
-        color: #808080;
-        font-size: 12px;
-        line-height: 1.2;
-        text-decoration: line-through;
-    }
+  &__discount {
+    color: var(--color-accent);
+    font-size: 16px;
+    line-height: 1.2;
+  }
 }
 
 .image-switch {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  &__item {
+    flex-grow: 1;
+    cursor: pointer;
+
+    &:first-child .image-switch__img {
+      opacity: 1;
+      z-index: -1;
+    }
+
+    @include mixins.isHovered {
+      & .image-switch__img {
+        opacity: 1;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__img {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 0;
-    z-index: 20;
+    z-index: 2;
     width: 100%;
     height: 100%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    background-color: #fff;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
 
-    &__item {
-        flex-grow: 1;
-        cursor: pointer;
-
-        &:first-child .image-switch__img {
-            opacity: 1;
-            z-index: -1;
-        }
-
-        @include mixins.isHovered {
-            & .image-switch__img {
-                opacity: 1;
-                z-index: -1;
-            }
-        }
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
-
-    &__img {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-        transform: translateX(-50%);
-        pointer-events: none;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-
-        img {
-            display: block;
-            max-width: 100%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+  }
 }
 
 .image-pagination {
-    position: absolute;
-    z-index: 30;
-    left: 0;
-    bottom: 15px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  z-index: 30;
+  left: 0;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-    &__item {
-        margin: 0 3px;
-        display: block;
-        width: 30px;
-        height: 5px;
-        border-radius: 10px;
-        background-color: #c4c4c4;
-        transition: width 0.3s ease-in-out;
+  &__item {
+    margin: 0 3px;
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #c4c4c4;
+    transition: width 0.3s ease-in-out;
 
-        &--active {
-            background-color: var(--color-accent);
-            width: 50px;
-        }
+    &--active {
+      background-color: var(--color-accent);
+      width: 50px;
     }
+  }
 }
