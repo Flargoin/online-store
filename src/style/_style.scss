@@ -6,13 +6,18 @@ body {
   font-size: 18px;
   line-height: 1.4;
   text-wrap: balance;
+  box-sizing: border-box;
 }
 
 .container {
   max-width: 1450px;
-  width: 100%;
   margin: 0 auto;
   padding: 0 var(--gutter);
+
+  // @media screen and (max-width: 1400px) {
+  //   width: auto;
+  //   max-width: 100%;
+  // }
 }
 
 ul {

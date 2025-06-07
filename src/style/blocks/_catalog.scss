@@ -1,22 +1,58 @@
 .catalog {
-    .grid-container {
-        position: relative;
-        // padding-top: 80px;
-        width: 100%;
-        display: grid;
-        gap: var(--gutter);
-        grid-template-columns: repeat(4, 1fr);
+  .grid-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: var(--gutter);
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: 1400px) {
+      width: 100%;
+      max-width: unset;
+      grid-template-columns: 50px repeat(3, 1fr);
     }
 
-    .products-grid {
-        display: grid;
-        gap: var(--gutter);
-        grid-column: 3 span;
-        grid-template-columns: repeat(3, 1fr);
+    @media screen and (max-width: 1170px) {
+      grid-template-columns: 50px repeat(2, 1fr);
     }
 
-    /* доп высота для теста */
-    .height {
-        height: 3000px;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 50px 1fr;
     }
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .products-grid {
+    display: grid;
+    gap: var(--gutter);
+    grid-column: 3 span;
+    grid-template-columns: repeat(3, 1fr);
+
+    &__item {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1400px) {
+      grid-column: 3 span;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 1170px) {
+      grid-column: 2/4;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-column: 1 span;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  //   /* доп высота для теста */
+  //   .height {
+  //     height: 3000px;
+  //   }
 }

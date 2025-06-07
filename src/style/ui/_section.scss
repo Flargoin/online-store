@@ -15,10 +15,18 @@
       height: 2px;
       background-color: var(--border-color);
     }
+
+    @media screen and (max-width: 1400px) {
+      margin-bottom: 40px;
+    }
   }
 
   &:first-child {
     padding-top: 80px;
+
+    @media screen and (max-width: 1024px) {
+      padding-top: 50px;
+    }
   }
 
   &:last-child {

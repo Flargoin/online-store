@@ -24,12 +24,74 @@
     }
   }
 
+  .burger {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      transition: transform 0.3s ease-in-out;
+
+      &::after,
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &::after {
+        transform: translateY(5px);
+      }
+
+      &::before {
+        transform: translateY(-7px);
+      }
+    }
+
+    &.js-active {
+      span {
+        height: 0;
+
+        &::after {
+          transform: translateY(0) rotate(-45deg);
+        }
+
+        &::before {
+          transform: translateY(2px) rotate(45deg);
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+    }
+  }
+
   &-triggers {
     margin-left: auto;
     display: flex;
     align-items: center;
     gap: 1.25rem;
     filter: opacity(1);
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 0.5rem 1.5rem 0.5rem;
+    gap: 0;
+    justify-content: space-between;
   }
 }
 h1 {
