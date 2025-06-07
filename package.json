@@ -13,14 +13,14 @@
     "lint:fix": "eslint src --fix",
     "prepare": "husky install"
   },
-  // "lint-staged": {
-  //   "src/**/*.{js}": [
-  //     "eslint"
-  //   ],
-  //   "*.{test.js,spec.js}": [
-  //     "jest --bail --findRelatedTests"
-  //   ]
-  // },
+  "lint-staged": {
+    "src/**/*.{js}": [
+      "eslint"
+    ],
+    "*.{test.js,spec.js}": [
+      "jest --bail --findRelatedTests"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
