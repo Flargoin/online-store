@@ -1,4 +1,5 @@
 .trigger {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,6 +10,30 @@
   color: var(--text-color);
   cursor: pointer;
   user-select: none;
+
+  &__counter {
+    position: relative;
+
+    .counter {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      font-size: 10px;
+      opacity: 0;
+
+      &.js-visible {
+        opacity: 1;
+      }
+    }
+  }
 
   svg {
     width: 20px;

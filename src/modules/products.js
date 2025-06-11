@@ -85,14 +85,14 @@ export class Product {
                 </h3>
 
                 <div class="product__info">
-                  <span>ID: 00${this.id}</span>
-                  <span>Brand: ${this.brand}</span>
-                  <span>Model: ${this.model}</span>
-                  <span>Color: ${this.color}</span>
+                  <div>ID: 00<span>${this.id}</span></div>
+                  <div>Brand: <span>${this.brand}</span></div>
+                  <div>Model: <span>${this.model}</span></div>
+                  <div>Color: <span>${this.color}</span></div>
                 </div>
 
                 <div class="product-price">
-                  <span class="product-price__current">${this.getPrice()} $</span>
+                  <div class="product-price__current"><span>${this.getPrice()}</span> $</div>
                 </div>
 
                 <button class="product__btn">Add to cart</button>

@@ -1,4 +1,4 @@
-export const getProductsInfo = fetch('https://fakestoreapi.in/api/products').then((res) =>
+export const getProductsInfo = fetch('https://fakestoreapi.in/api/products?page=2').then((res) =>
   res.json(),
 );
 
