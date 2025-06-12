@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import { EffectFade, Thumbs } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import {  }
+// import {  }
 import { addItemToCart, counterItemsInCart, renderCart, cart } from './modules/cart';
 import { catalogList, renderCatalog, getData } from './modules/catalog';
 

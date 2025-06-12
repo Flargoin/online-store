@@ -1,4 +1,4 @@
-export let cart = [];
+export let cart = new Set();
 
 export const addItemToCart = (e) => {
   const itemObj = {
@@ -13,9 +13,9 @@ export const addItemToCart = (e) => {
     totalPrice: 0,
   };
   const target = e.target;
+  const card = target.closest('.product');
 
   if (target.classList.contains('product__btn')) {
-    const card = target.closest('.product');
     itemObj.img = card.querySelector('.image-switch__img img').src;
     itemObj.id = card.querySelector('.product__info div:first-child span').textContent.trim();
     itemObj.brand = card.querySelector('.product__info div:nth-of-type(2) span').textContent.trim();
@@ -26,8 +26,13 @@ export const addItemToCart = (e) => {
     itemObj.count = 1;
   }
   console.log('Объект с данными карточки которую добавляем в корзину', itemObj);
-  cart.push(itemObj);
-  localStorage.setItem('cart', JSON.stringify(cart));
+
+  try {
+    const currentCart = localStorage.getItem('cart');
+  } catch (e) {}
+  cart.add(itemObj);
+
+  localStorage.setItem('cart', JSON.stringify([...cart]));
 
   counterItemsInCart();
 };
