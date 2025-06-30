@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
@@ -15,11 +16,16 @@ module.exports = {
     port: 8080,
     open: true,
     hot: true,
+    historyApiFallback: true,
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
   },
   entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
 
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     clean: true,
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[name][ext]',
@@ -28,6 +34,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/templates', to: 'templates' }, // копируем все шаблоны в dist/templates
+      ],
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

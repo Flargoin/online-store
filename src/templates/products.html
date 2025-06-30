@@ -1,0 +1,152 @@
+<section class="catalog section">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="title">Catalog</h2>
+    </div>
+
+    <div class="products-content grid-container">
+      <div class="filters">
+        <div class="filters__block fixed">
+          <h2 class="filters__title">Filters</h2>
+          <div class="filters__item filters-price">
+            <details class="control__column">
+              <summary class="filters-price__title">Price</summary>
+
+              <div class="control__content">
+                <div class="filters-price__inputs">
+                  <div class="filters-price__block">
+                    <input
+                      type="text"
+                      minlength="3"
+                      maxlength="7"
+                      value="100"
+                      class="filters-price__input"
+                      data-price-min
+                    />
+                  </div>
+                  <div class="filters-price__block">
+                    <input
+                      type="text"
+                      minlength="3"
+                      maxlength="7"
+                      value="600"
+                      class="filters-price__input"
+                      data-price-max
+                    />
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <div class="filters__item filters-categories">
+            <details class="control__column">
+              <summary class="filters-price__title">Categories</summary>
+              <div class="control__content">
+                <div class="filters-has__group control__group">
+                  <input
+                    id="has-other"
+                    type="checkbox"
+                    class="filters-has__input"
+                    value="tv"
+                    checked
+                  />
+                  <label for="has-other" class="filters-has__label">TV</label>
+                </div>
+
+                <div class="filters-has__group control__group">
+                  <input id="has-yes" type="checkbox" class="filters-has__input" value="audio" />
+                  <label for="has-yes" class="filters-has__label">Audio</label>
+                </div>
+
+                <div class="filters-has__group control__group">
+                  <input id="has-no" type="checkbox" class="filters-has__input" value="laptop" />
+                  <label for="has-no" class="filters-has__label">Laptop</label>
+                </div>
+
+                <div class="filters-has__group control__group">
+                  <input id="has-no" type="checkbox" class="filters-has__input" value="mobile" />
+                  <label for="has-no" class="filters-has__label">Mobile</label>
+                </div>
+
+                <div class="filters-has__group control__group">
+                  <input id="has-no" type="checkbox" class="filters-has__input" value="gaming" />
+                  <label for="has-no" class="filters-has__label">Gaming</label>
+                </div>
+
+                <div class="filters-has__group control__group">
+                  <input
+                    id="has-no"
+                    type="checkbox"
+                    class="filters-has__input"
+                    value="appliances"
+                  />
+                  <label for="has-no" class="filters-has__label">Appliances</label>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <div class="filters__item filters-categories">
+            <details class="control__column">
+              <summary class="filters-price__title">Brands</summary>
+              <div class="control__content">
+                <div class="filters-has__group control__group">
+                  <input
+                    id="has-other"
+                    type="checkbox"
+                    class="filters-has__input"
+                    value="tv"
+                    checked
+                  />
+                  <label for="has-other" class="filters-has__label">TV</label>
+                </div>
+
+                <div class="filters-has__group control__group">
+                  <input id="has-yes" type="checkbox" class="filters-has__input" value="audio" />
+                  <label for="has-yes" class="filters-has__label">Audio</label>
+                </div>
+
+                <div class="filters-has__group control__group">
+                  <input id="has-no" type="checkbox" class="filters-has__input" value="laptop" />
+                  <label for="has-no" class="filters-has__label">Laptop</label>
+                </div>
+
+                <div class="filters-has__group control__group">
+                  <input id="has-no" type="checkbox" class="filters-has__input" value="mobile" />
+                  <label for="has-no" class="filters-has__label">Mobile</label>
+                </div>
+
+                <div class="filters-has__group control__group">
+                  <input id="has-no" type="checkbox" class="filters-has__input" value="gaming" />
+                  <label for="has-no" class="filters-has__label">Gaming</label>
+                </div>
+
+                <div class="filters-has__group control__group">
+                  <input
+                    id="has-no"
+                    type="checkbox"
+                    class="filters-has__input"
+                    value="appliances"
+                  />
+                  <label for="has-no" class="filters-has__label">Appliances</label>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-filters">
+        <button class="btn mobile-filters__btn" onclick="window.myDialog.showModal()">
+          <svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 7H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7 12L17 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11 17H13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <ul class="products-grid"></ul>
+    </div>
+  </div>
+</section>

@@ -3,9 +3,10 @@ import { Product } from './products';
 import { filterState, filterPrice, inputMax, inputMin } from './filters';
 
 export let catalogData = [];
-export const catalogList = document.querySelector('.products-grid');
+export let catalogList = document.querySelector('.products-grid');
 
 export const renderCatalog = async () => {
+  console.log(catalogList);
   catalogList.innerHTML = '';
   await getData();
   if (filterState.priceFilter) {

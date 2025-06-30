@@ -1,52 +1,53 @@
- // Функция для загрузки контента страницы (имитация)
- const loadPage = (page) => {
-    const content = document.getElementById('content');
-    switch(page) {
-      case 'home':
-        content.textContent = 'Добро пожаловать в наш интернет-магазин!';
-        break;
-      case 'products':
-        content.textContent = 'Список товаров: Товар 1, Товар 2, Товар 3.';
-        break;
-      case 'cart':
-        content.textContent = 'Ваша корзина пуста.';
-        break;
-      default:
-        content.textContent = 'Страница не найдена.';
-    }
+const routes = {
+  '/': {
+    template: '/templates/products.html',
+    title: 'Catalog | Internet-Shop',
+  },
+  '/product': {
+    template: '/templates/product.html',
+    title: 'Product page | Internet-Shop',
+  },
+  '/cart': {
+    template: '/templates/cart.html',
+    title: 'Cart | Internet-Shop',
+  },
+  404: {
+    template: '/templates/404.html',
+    title: 'Page not found | Internet-Shop',
+  },
+};
+
+const contentDiv = document.querySelector('.content');
+
+// Обработка навигации
+async function navigateTo(path) {
+  const route = (await routes[path]) || (await routes[404]);
+
+  // Загрузка шаблона
+  const html = await fetch(route.template).then((res) => res.text());
+  contentDiv.innerHTML = await html;
+  document.title = await route.title;
+
+  // Сохранение в истории
+  history.pushState({ path }, '', path);
+}
+
+// Перехват кликов по ссылкам
+document.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    e.preventDefault();
+    navigateTo(e.target.getAttribute('href'));
   }
+});
 
-  // Обработчик клика по ссылкам навигации
-  document.querySelector('nav').addEventListener('click', function(e) {
-    if (e.target.tagName === 'A') {
-      e.preventDefault(); // Отменяем переход по ссылке
+// Обработка кнопок назад/вперед
+window.addEventListener('popstate', (e) => {
+  if (e.state?.path) {
+    navigateTo(e.state.path);
+  }
+});
 
-      const page = e.target.getAttribute('data-page');
-
-      // Загружаем контент страницы
-      loadPage(page);
-
-      // Добавляем запись в историю браузера с новым URL и состоянием
-      history.pushState({page: page}, '', e.target.getAttribute('href'));
-    }
-  });
-
-  // Обработка события popstate при навигации назад/вперед
-  window.addEventListener('popstate', function(event) {
-    if (event.state && event.state.page) {
-      loadPage(event.state.page);
-    } else {
-      // Если state отсутствует, можно загрузить страницу по умолчанию
-      loadPage('home');
-    }
-  });
-
-  // При загрузке страницы загружаем контент в зависимости от URL
-  window.addEventListener('DOMContentLoaded', function() {
-    // Определяем страницу из URL (например, /products -> products)
-    const path = window.location.pathname.replace('/', '') || 'home';
-    loadPage(path);
-
-    // Инициализируем состояние истории
-    history.replaceState({page: path}, '', window.location.pathname);
-  });
+// Инициализация
+window.addEventListener('DOMContentLoaded', async () => {
+  await navigateTo(window.location.pathname);
+});
