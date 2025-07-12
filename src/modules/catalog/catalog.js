@@ -1,5 +1,3 @@
-// import Product from '/product.js';
-
 export default class Catalog {
   constructor({ catalogEl, catalogProduct }) {
     this.catalogEl = catalogEl;
@@ -17,8 +15,6 @@ export default class Catalog {
     const product = document.createElement('article');
     product.classList.add('product');
     catalogItem.append(product);
-
-    console.log(this.catalogProduct);
 
     product.innerHTML = `
           <div class="product__image">

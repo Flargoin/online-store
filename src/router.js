@@ -1,7 +1,29 @@
+import { getData } from './modules/services/getData';
+import Catalog from './modules/catalog/catalog';
+import Product from './modules/catalog/product';
+
 const routes = {
   '/': {
     template: '/templates/products.html',
     title: 'Catalog | Internet-Shop',
+    loadData: async () => {
+      try {
+        const data = await getData('https://fakestoreapi.in/api/products');
+        const container = document.querySelector('.products-grid');
+        container.innerHTML = ''; // очистить перед рендером
+
+        for (const item of data.products) {
+          const productInstance = new Product(item);
+          const catalogInstance = new Catalog({
+            catalogEl: '.products-grid',
+            catalogProduct: productInstance,
+          });
+          catalogInstance.init();
+        }
+      } catch (error) {
+        console.error('Ошибка получения данных:', error);
+      }
+    },
   },
   '/product': {
     template: '/templates/product.html',
@@ -31,10 +53,19 @@ async function navigateTo(path) {
   const html = await fetch(route.template).then((res) => res.text());
   contentDiv.innerHTML = await html;
   document.title = await route.title;
-  let cart;
 
   // Сохранение в истории
   history.pushState({ path }, '', path);
+
+  // Загрузка данных для шаблона
+  if (route.loadData) {
+    await route.loadData();
+  }
+}
+
+export async function router() {
+  const path = window.location.pathname;
+  await navigateTo(path);
 }
 
 // Перехват кликов по ссылкам
