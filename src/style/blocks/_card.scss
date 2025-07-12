@@ -2,6 +2,7 @@
   &__inner {
     margin-bottom: 40px;
     display: flex;
+    flex-direction: column;
     gap: 60px;
 
     @media screen and (max-width: 1024px) {
@@ -9,6 +10,15 @@
       margin-bottom: 20px;
       flex-direction: column;
       gap: 0px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    gap: 60px;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
     }
   }
 

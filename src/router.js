@@ -39,6 +39,7 @@ const loadProduct = async (id) => {
     }
     // Здесь рендер товара
     const product = new Product(data.products[id - 1]);
+    document.title = `Internet Shop | ${product.title}`;
     product.render();
   } catch (error) {
     console.error('Ошибка загрузки товара:', error);
@@ -48,27 +49,27 @@ const loadProduct = async (id) => {
 const routes = {
   '/': {
     template: '/templates/products.html',
-    title: 'Catalog | Internet-Shop',
+    title: 'Catalog',
     loadData: loadCatalog,
   },
   '/product/:id': {
     template: '/templates/product.html',
-    title: 'Товар',
+    title: 'Product',
     loadData: async (params) => {
       await loadProduct(Number(params.id));
     },
   },
   '/favorites': {
     template: '/templates/favorites.html',
-    title: 'Product page | Internet-Shop',
+    title: 'Favorites',
   },
   '/cart': {
     template: '/templates/cart.html',
-    title: 'Cart | Internet-Shop',
+    title: 'Cart',
   },
   404: {
     template: '/templates/404.html',
-    title: 'Page not found | Internet-Shop',
+    title: 'Page not found',
   },
 };
 
@@ -108,7 +109,7 @@ async function navigateTo(path) {
 
   const html = await fetch(route.template).then((res) => res.text());
   contentDiv.innerHTML = html;
-  document.title = route.title;
+  document.title = `Internet Shop | ${route.title}`;
 
   history.pushState({ path }, '', path);
 

@@ -16,34 +16,35 @@ export default class Product {
     const productCard = document.querySelector('.card');
 
     productCard.innerHTML = `
-        <div class="card__inner">
-      <div class="card-slider">
-        <div class="card-slider__nav slider-nav">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide slider-nav__item">
-              <img
-                src="${this.image}"
-                alt="#"
-                loading="lazy"
-                decoding="async"
-              />
+    <div class="card__inner">
+        <div class="card__top">
+          <div class="card-slider">
+            <div class="card-slider__nav slider-nav">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slider-nav__item">
+                  <img
+                    src="${this.image}"
+                    alt="#"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="card-slider__block slider-block">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide slider-block__slide">
-              <img
-                src="${this.image}"
-                alt="#"
-                loading="lazy"
-                decoding="async"
-              />
+            <div class="card-slider__block slider-block">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slider-block__slide">
+                  <img
+                    src="${this.image}"
+                    alt="#"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
             </div>
         </div>
       </div>
-
       <div class="card-info">
         <span class="vendor">Article number: <span class="vendor-number">000${this.id}</span></span>
         <h1 class="card__title title">
