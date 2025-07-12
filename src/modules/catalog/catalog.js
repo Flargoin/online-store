@@ -20,14 +20,15 @@ export default class Catalog {
           <div class="product__image">
               <div class="product__switch image-switch">
                   <div class="image-switch__item">
-                  <div class="image-switch__img">
+                    <div class="image-switch__img">
                       <img
                       src="${this.catalogProduct.image}"
                       alt=""
                       loading="lazy"
                       decoding="async"
                       />
-                  </div>
+                      </div>
+                      <a href="/product/${this.catalogProduct.id}">
                   </div>
               </div>
               <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
@@ -53,7 +54,7 @@ export default class Catalog {
 
               <div class="product__body">
               <h3 class="h3 product__title">
-                  <a href="#"
+                  <a href="/product/${this.catalogProduct.id}"
                   >${this.catalogProduct.title}</a
                   >
               </h3>
