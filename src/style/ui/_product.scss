@@ -1,6 +1,9 @@
 @use '../mixins' as mixins;
 
 .product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: #fff;
   border-radius: 4px;
   border: 1px solid #d9d9d9;
@@ -17,6 +20,9 @@
   }
 
   &__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 20px;
     padding-top: 10px;
 
@@ -76,6 +82,7 @@
   }
 
   &__btn {
+    margin-top: auto;
     width: 100%;
     border: 1px solid var(--color-accent);
     border-radius: 4px;

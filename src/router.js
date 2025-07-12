@@ -7,6 +7,10 @@ const routes = {
     template: '/templates/product.html',
     title: 'Product page | Internet-Shop',
   },
+  '/favorites': {
+    template: '/templates/favorites.html',
+    title: 'Product page | Internet-Shop',
+  },
   '/cart': {
     template: '/templates/cart.html',
     title: 'Cart | Internet-Shop',
@@ -27,6 +31,7 @@ async function navigateTo(path) {
   const html = await fetch(route.template).then((res) => res.text());
   contentDiv.innerHTML = await html;
   document.title = await route.title;
+  let cart;
 
   // Сохранение в истории
   history.pushState({ path }, '', path);
