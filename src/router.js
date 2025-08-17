@@ -1,16 +1,18 @@
 import { getData } from './modules/services/getData';
+import { updateGlobalUI } from './modules/utils/ui';
 import Catalog from './modules/catalog/catalog';
 import Product from './modules/catalog/product';
+import Cart from './modules/cart/cart';
 
 let data;
+const contentDiv = document.querySelector('.content');
 
+// Загрузка данных для страницы каталога
 const loadCatalog = async () => {
   try {
-    data = await getData('https://fakestoreapi.in/api/products');
-    console.log(data);
+    data = await getData('https://fakestoreapi.in/api/products', 'API is not available');
     const container = document.querySelector('.products-grid');
-    container.innerHTML = ''; // очистить перед рендером
-
+    container.innerHTML = '';
     for (const item of data.products) {
       const productInstance = new Product(item);
       const catalogInstance = new Catalog({
@@ -18,34 +20,60 @@ const loadCatalog = async () => {
         catalogProduct: productInstance,
       });
       catalogInstance.init();
+
+      const products = document.querySelectorAll('.product');
+      products.forEach((product, i) => {
+        if (item.id === i + 1) {
+          const btn = product.querySelector('.product__btn');
+          btn.addEventListener('click', (e) => {
+            productInstance.addToCart(item.id);
+          });
+        }
+      });
     }
   } catch (error) {
     console.error('Ошибка получения данных:', error);
   }
 };
 
-// Загрузка товара по id и рендер
+// Загрузка данных для страницы товара
 const loadProduct = async (id) => {
-  console.log(id);
+  let productData;
+  let product;
+
   try {
     if (!data) {
-      await loadCatalog(); // если каталога нет, загрузить
+      productData = await getData(
+        `https://fakestoreapi.in/api/products/${id}`,
+        'API is not available',
+      );
+      product = new Product(productData.product);
+    } else {
+      productData = data.products.find((item) => item.id === id);
+      product = new Product(productData);
     }
-    const productData = data.products.find((p) => p.id === id);
+
     if (!productData) {
       console.error('Товар не найден');
-      // Можно показать 404 или сообщение
       return;
     }
     // Здесь рендер товара
-    const product = new Product(data.products[id - 1]);
     document.title = `Internet Shop | ${product.title}`;
+
     product.render();
   } catch (error) {
     console.error('Ошибка загрузки товара:', error);
   }
 };
 
+// Загрузка данных для страницы корзины
+const loadCart = async () => {
+  data = await getData('https://fakestoreapi.in/api/products', 'API is not available');
+  const cart = new Cart(data.products);
+  cart.render();
+};
+
+// Маршруты
 const routes = {
   '/': {
     template: '/templates/products.html',
@@ -66,6 +94,7 @@ const routes = {
   '/cart': {
     template: '/templates/cart.html',
     title: 'Cart',
+    loadData: loadCart,
   },
   404: {
     template: '/templates/404.html',
@@ -74,7 +103,7 @@ const routes = {
 };
 
 // Функция сопоставления пути с маршрутом и извлечения параметров
-function matchRoute(path) {
+const matchRoute = (path) => {
   for (const routePath in routes) {
     const routeParts = routePath.split('/').filter(Boolean);
     const pathParts = path.split('/').filter(Boolean);
@@ -99,12 +128,10 @@ function matchRoute(path) {
     }
   }
   return { route: routes[404], params: {} };
-}
-
-const contentDiv = document.querySelector('.content');
+};
 
 // Навигация по маршруту
-async function navigateTo(path) {
+const navigateTo = async (path) => {
   const { route, params } = matchRoute(path);
 
   const html = await fetch(route.template).then((res) => res.text());
@@ -116,12 +143,16 @@ async function navigateTo(path) {
   if (route.loadData) {
     await route.loadData(params);
   }
-}
 
-export async function router() {
+  updateGlobalUI();
+};
+
+// Функция роутинга и всё что надо во время роута.
+export const router = async () => {
   const path = window.location.pathname;
   await navigateTo(path);
-}
+  await updateGlobalUI();
+};
 
 // Перехват кликов по ссылкам
 document.addEventListener('click', (e) => {

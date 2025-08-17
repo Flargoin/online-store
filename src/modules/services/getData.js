@@ -1,4 +1,4 @@
-export const getData = async (url) => {
+export const getData = async (url, errorMessage) => {
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -7,7 +7,8 @@ export const getData = async (url) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error);
+    const content = document.querySelector('.content');
+    content.innerHTML = `<div class="error">${errorMessage}</div>`;
     throw error;
   }
 };

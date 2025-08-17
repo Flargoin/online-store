@@ -5,7 +5,6 @@ export default class Catalog {
   }
 
   init() {
-    // console.log(this);
     const catalog = document.querySelector(this.catalogEl);
 
     const catalogItem = document.createElement('li');

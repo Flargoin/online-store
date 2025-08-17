@@ -10,6 +10,47 @@ export default class Product {
     this.discount = discount;
     this.description = description;
     this.category = category;
+    this.count = 0;
+  }
+
+  addToCart(id) {
+    let cart = [];
+    try {
+      const cartData = localStorage.getItem('cart');
+      cart = cartData ? JSON.parse(cartData) : [];
+    } catch (e) {
+      cart = [];
+    }
+
+    const existingItem = cart.find((item) => item.id === id);
+
+    if (existingItem) {
+      existingItem.count++;
+    } else {
+      cart.push({ id, count: 1 });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    this.updateCartCounter();
+  }
+
+  updateCartCounter() {
+    const counter = document.querySelector('.counter');
+    if (counter && +counter.textContent > 0) {
+      counter.classList.add('js-visible');
+      const totalItems = this.getCartTotalItems();
+      counter.textContent = totalItems;
+    }
+  }
+
+  getCartTotalItems() {
+    try {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      return cart.reduce((total, item) => total + item.count, 0);
+    } catch (error) {
+      return 0;
+    }
   }
 
   render() {
@@ -50,63 +91,6 @@ export default class Product {
         <h1 class="card__title title">
           ${this.title}
         </h1>
-        <div class="card-info__testimonials">
-          <!-- <div class="rating">
-                  <svg
-                    width="32"
-                    height="32"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                    />
-                  </svg>
-                  <svg
-                    width="32"
-                    height="32"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                    />
-                  </svg>
-                  <svg
-                    width="32"
-                    height="32"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                    />
-                  </svg>
-                  <svg
-                    width="32"
-                    height="32"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                    />
-                  </svg>
-                  <svg
-                    width="32"
-                    height="32"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
-                    />
-                  </svg>
-                </div> -->
-          <!-- <a href="#" class="card-info__testimonials-link">Отзывы 83</a> -->
-        </div>
-
-        <!-- <div class="available">В наличии: 13шт</div> -->
 
         <div class="price">
           <span class="price__current"><span>${this.price}</span> $</span>
