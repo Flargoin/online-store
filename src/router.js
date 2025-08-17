@@ -1,5 +1,6 @@
 import { getData } from './modules/services/getData';
 import { updateGlobalUI } from './modules/utils/ui';
+import { store } from './../src/index';
 import Catalog from './modules/catalog/catalog';
 import Product from './modules/catalog/product';
 import Cart from './modules/cart/cart';
@@ -145,6 +146,7 @@ const navigateTo = async (path) => {
   }
 
   updateGlobalUI();
+  console.log(store.getState());
 };
 
 // Функция роутинга и всё что надо во время роута.
