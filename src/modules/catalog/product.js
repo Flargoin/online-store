@@ -48,8 +48,8 @@ export default class Product {
     }
   }
 
-  getImages(container) {
-    const imagesSlider = document.querySelectorAll(container);
+  getImages() {
+    const imagesSlider = document.querySelectorAll('.product__switch.image-switch');
     [...this.images].forEach((image) => {
       const slide = document.createElement('div');
       slide.classList.add('image-switch__item');
