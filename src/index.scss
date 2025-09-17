@@ -1,4 +1,4 @@
-@use './libs/normalize.css';
+@use './assets/libs/normalize.css';
 @use './style/vars';
 @use './style/fonts';
 @use './style/style';
@@ -28,8 +28,8 @@
 @use './style/ui/modal';
 
 .error {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

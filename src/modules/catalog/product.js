@@ -1,16 +1,11 @@
 export default class Product {
-  constructor({ image, title, id, brand, model, color, price, discount, description, category }) {
-    this.image = image;
-    this.title = title;
-    this.id = id;
-    this.brand = brand;
-    this.model = model;
-    this.color = color;
-    this.price = price;
-    this.discount = discount;
-    this.description = description;
-    this.category = category;
-    this.count = 0;
+  constructor({ id, title, slug, price, description, images }) {
+    (this.id = id),
+      (this.title = title),
+      (this.slug = slug),
+      (this.price = price),
+      (this.description = description),
+      (this.images = images);
   }
 
   addToCart(id) {
@@ -53,6 +48,25 @@ export default class Product {
     }
   }
 
+  getImages(container) {
+    const imagesSlider = document.querySelectorAll(container);
+    [...this.images].forEach((image) => {
+      const slide = document.createElement('div');
+      slide.classList.add('image-switch__item');
+      slide.innerHTML = `
+          <div class="image-switch__img">
+            <img src="${image}" alt="" loading="lazy" decoding="async">
+          </div>
+          
+      `;
+
+      imagesSlider.forEach((slider) => {
+        console.log(slide);
+        slider.append(slide);
+      });
+    });
+  }
+
   render() {
     const productCard = document.querySelector('.card');
 
@@ -62,14 +76,7 @@ export default class Product {
           <div class="card-slider">
             <div class="card-slider__nav slider-nav">
               <div class="swiper-wrapper">
-                <div class="swiper-slide slider-nav__item">
-                  <img
-                    src="${this.image}"
-                    alt="#"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
+
               </div>
             </div>
 
@@ -92,11 +99,13 @@ export default class Product {
           ${this.title}
         </h1>
 
+        <p>${this.description}</p>
+
         <div class="price">
           <span class="price__current"><span>${this.price}</span> $</span>
         </div>
 
-        <div class="discount">Discount: <span>${this.discount}</span>%</div>
+        // <div class="discount">Discount: <span>${this.discount}</span>%</div>
 
         <div class="card-info__triggers">
           <button class="btn btn--buy">Add to cart</button>
@@ -152,5 +161,7 @@ export default class Product {
       </div>
     </div>
     `;
+
+    this.getImages();
   }
 }

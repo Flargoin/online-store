@@ -6,15 +6,16 @@ import Product from './modules/catalog/product';
 import Cart from './modules/cart/cart';
 
 let data;
+let apiURL = 'https://api.escuelajs.co/api/v1/products';
 const contentDiv = document.querySelector('.content');
 
 // Загрузка данных для страницы каталога
 const loadCatalog = async () => {
   try {
-    data = await getData('https://fakestoreapi.in/api/products', 'API is not available');
+    data = await getData(apiURL, 'API is not available');
     const container = document.querySelector('.products-grid');
     container.innerHTML = '';
-    for (const item of data.products) {
+    for (const item of data) {
       const productInstance = new Product(item);
       const catalogInstance = new Catalog({
         catalogEl: '.products-grid',
@@ -69,7 +70,7 @@ const loadProduct = async (id) => {
 
 // Загрузка данных для страницы корзины
 const loadCart = async () => {
-  data = await getData('https://fakestoreapi.in/api/products', 'API is not available');
+  data = await getData(apiURL, 'API is not available');
   const cart = new Cart(data.products);
   cart.render();
 };

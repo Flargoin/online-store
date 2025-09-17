@@ -38,6 +38,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/templates', to: 'templates' }, // копируем все шаблоны в dist/templates
+        { from: 'src/assets', to: 'assets' }, // копируем все файлы в dist/assets
       ],
     }),
     new MiniCssExtractPlugin({

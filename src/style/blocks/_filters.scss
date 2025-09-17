@@ -128,9 +128,17 @@
     grid-column: 1 span;
 
     svg {
-      width: 100%;
-      height: 100%;
+      width: 24px;
+      height: 24px;
       stroke: var(--color-white);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        svg {
+          stroke: var(--color-accent);
+        }
+      }
     }
   }
 }
