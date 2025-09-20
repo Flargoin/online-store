@@ -10,27 +10,37 @@
           <h2 class="filters__title">Filters</h2>
           <div class="filters__item filters-price">
             <details class="control__column">
-              <summary class="filters-price__title">Price</summary>
+              <summary class="filters-price__title control__summary">
+                <div>Price</div>
+
+                <svg class="ico">
+                  <use href="../assets/images/sprite.svg#arrow"></use>
+                </svg>
+              </summary>
 
               <div class="control__content">
                 <div class="filters-price__inputs">
-                  <div class="filters-price__block">
+                  <div class="filters-price__block control__group">
+                    <label for="price-to" class="control__label"> from </label>
                     <input
+                      id="price-to"
                       type="text"
                       minlength="3"
                       maxlength="7"
                       value="100"
-                      class="filters-price__input"
+                      class="filters-price__input control__input"
                       data-price-min
                     />
                   </div>
-                  <div class="filters-price__block">
+                  <div class="filters-price__block control__group">
+                    <label for="price-from" class="control__label"> to </label>
                     <input
+                      id="price-from"
                       type="text"
                       minlength="3"
                       maxlength="7"
                       value="600"
-                      class="filters-price__input"
+                      class="filters-price__input control__input"
                       data-price-max
                     />
                   </div>
@@ -41,9 +51,15 @@
 
           <div class="filters__item filters-categories">
             <details class="control__column">
-              <summary class="filters-price__title">Categories</summary>
+              <summary class="filters-price__title control__summary">
+                Categories
+
+                <svg class="ico">
+                  <use href="../assets/images/sprite.svg#arrow"></use>
+                </svg>
+              </summary>
               <div class="control__content">
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input
                     id="has-other"
                     type="checkbox"
@@ -54,27 +70,27 @@
                   <label for="has-other" class="filters-has__label">TV</label>
                 </div>
 
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input id="has-yes" type="checkbox" class="filters-has__input" value="audio" />
                   <label for="has-yes" class="filters-has__label">Audio</label>
                 </div>
 
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input id="has-no" type="checkbox" class="filters-has__input" value="laptop" />
                   <label for="has-no" class="filters-has__label">Laptop</label>
                 </div>
 
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input id="has-no" type="checkbox" class="filters-has__input" value="mobile" />
                   <label for="has-no" class="filters-has__label">Mobile</label>
                 </div>
 
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input id="has-no" type="checkbox" class="filters-has__input" value="gaming" />
                   <label for="has-no" class="filters-has__label">Gaming</label>
                 </div>
 
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input
                     id="has-no"
                     type="checkbox"
@@ -89,9 +105,15 @@
 
           <div class="filters__item filters-categories">
             <details class="control__column">
-              <summary class="filters-price__title">Brands</summary>
+              <summary class="filters-price__title control__summary">
+                Brands
+
+                <svg class="ico">
+                  <use href="../assets/images/sprite.svg#arrow"></use>
+                </svg>
+              </summary>
               <div class="control__content">
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input
                     id="has-other"
                     type="checkbox"
@@ -102,27 +124,27 @@
                   <label for="has-other" class="filters-has__label">TV</label>
                 </div>
 
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input id="has-yes" type="checkbox" class="filters-has__input" value="audio" />
                   <label for="has-yes" class="filters-has__label">Audio</label>
                 </div>
 
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input id="has-no" type="checkbox" class="filters-has__input" value="laptop" />
                   <label for="has-no" class="filters-has__label">Laptop</label>
                 </div>
 
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input id="has-no" type="checkbox" class="filters-has__input" value="mobile" />
                   <label for="has-no" class="filters-has__label">Mobile</label>
                 </div>
 
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input id="has-no" type="checkbox" class="filters-has__input" value="gaming" />
                   <label for="has-no" class="filters-has__label">Gaming</label>
                 </div>
 
-                <div class="filters-has__group control__group">
+                <div class="filters-has__group control__group control__group--horizontal">
                   <input
                     id="has-no"
                     type="checkbox"
